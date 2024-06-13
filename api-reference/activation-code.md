@@ -1,11 +1,11 @@
 # Activation code
 
-اللااتبا
+e3e3e3e3e3e3اللااتبا
 
 
 
 ```
-// Some code
+// Some codeee3
 ```
 
 {% swagger src="../.gitbook/assets/api docs.json" path="/activation-code" method="get" %}
