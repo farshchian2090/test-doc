@@ -228,7 +228,7 @@
                 "tags": [
                     "Area"
                 ],
-                "summary": "get areas list 22222",
+                "summary": "get areas list",
                 "description": "Returns list of areas",
                 "operationId": "getAreas",
                 "responses": {
