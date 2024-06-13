@@ -2,7 +2,7 @@
 
 یاتثمیتضمنت
 
-ینثمصنیمثصنیمکثصنمک
+ینثمصنیمثصنیمکثصنمک 22
 
 {% swagger src="../.gitbook/assets/api docs.json" path="/area" method="get" %}
 [api docs.json](<../.gitbook/assets/api docs.json>)
