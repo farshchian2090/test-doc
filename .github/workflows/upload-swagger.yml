@@ -16,7 +16,7 @@ jobs:
     - name: Read Swagger JSON
       id: read-json
       run: |
-        SWAGGER_JSON=$(cat ".gitbook/assets/api docs.json" | jq -R -s)
+        SWAGGER_JSON=$(cat ".gitbook/assets/api dog.json" | jq -Rs 'gsub("\\n"; "")')
         echo "::set-output name=swagger_json::$SWAGGER_JSON"
 
     - name: Upload Swagger to GitBook
