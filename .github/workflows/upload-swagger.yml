@@ -29,4 +29,4 @@ jobs:
           curl -X POST "https://api.gitbook.com/v1/spaces/zsMmqzKLpQbo1bWGbk2E/content/import" \
           -H "Authorization: Bearer $GITBOOK_API_TOKEN" \
           -H "Content-Type: application/json" \
-          -d "{\"url\": "https://raw.githubusercontent.com/farshchian2090/test-doc/main/.gitbook/assets/api%20docs.json?token=GHSAT0AAAAAACS7FQHQXERPJGOHSDCDZPFIZTNILEQ" , \"source\":"open-api"}"
+          -d "{\"url\": \"https://raw.githubusercontent.com/farshchian2090/test-doc/main/.gitbook/assets/api%20docs.json?token=GHSAT0AAAAAACS7FQHQXERPJGOHSDCDZPFIZTNILEQ\" , \"source\":\"open-api\"}"
