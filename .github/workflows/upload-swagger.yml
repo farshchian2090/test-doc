@@ -10,24 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Read Swagger JSON
-      id: read-json
-      run: |
-        SWAGGER_JSON=$(cat ".gitbook/assets/api dog.json" | jq -Rs 'gsub("\\n"; "")')
-        echo "::set-output name=swagger_json::$SWAGGER_JSON"
+      - name: Read Swagger JSON
+        id: read-json
+        run: |
+          SWAGGER_JSON=$(cat ".gitbook/assets/api dog.json" | jq -Rs 'gsub("\\n"; "")')
+          echo "::set-output name=swagger_json::$SWAGGER_JSON"
 
-    - name: Upload Swagger to GitBook
-      env:
-        GITBOOK_API_TOKEN: gb_api_IFbrinOcOsenGTyLvbKpSBwbdK9J7VvYYGsRpQpr
-      run: |
-        JSON_CONTENT=$(echo "${{ steps.read-json.outputs.swagger_json }}")
-        JSON_CONTENT=${JSON_CONTENT//\"/\\\"}
-
-        # Send the JSON data to GitBook API using POST method
-        curl -X POST "https://api.gitbook.com/v1/spaces/zsMmqzKLpQbo1bWGbk2E/content/import" \
-        -H "Authorization: Bearer $GITBOOK_API_TOKEN" \
-        -H "Content-Type: application/json" \
-        -d "{\"content\": \"$JSON_CONTENT\"}"
+      - name: Upload Swagger to GitBook
+        env:
+          GITBOOK_API_TOKEN: gb_api_IFbrinOcOsenGTyLvbKpSBwbdK9J7VvYYGsRpQpr
+        run: |
+          #        JSON_CONTENT=$(echo "${{ steps.read-json.outputs.swagger_json }}")
+          #        JSON_CONTENT=${JSON_CONTENT//\"/\\\"}
+          
+          curl -X POST "https://api.gitbook.com/v1/spaces/zsMmqzKLpQbo1bWGbk2E/content/import" \
+          -H "Authorization: Bearer $GITBOOK_API_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d "{\"url\": "https://raw.githubusercontent.com/farshchian2090/test-doc/main/.gitbook/assets/api%20docs.json?token=GHSAT0AAAAAACS7FQHQXERPJGOHSDCDZPFIZTNILEQ" , \"source\":"open-api"}"
