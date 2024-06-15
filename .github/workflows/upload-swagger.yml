@@ -21,7 +21,7 @@ jobs:
 
     - name: Upload Swagger to GitBook
       env:
-        GITBOOK_API_TOKEN: gb_api_NgvSuzyF85I05tSd29oMxMnHWlCUDNwwzOXiqLvY
+        GITBOOK_API_TOKEN: gb_api_IFbrinOcOsenGTyLvbKpSBwbdK9J7VvYYGsRpQpr
       run: |
         curl -X PUT "https://api.gitbook.com/v1/spaces/zsMmqzKLpQbo1bWGbk2E/content" \
         -H "Authorization: Bearer $GITBOOK_API_TOKEN" \
