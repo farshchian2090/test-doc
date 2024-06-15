@@ -25,7 +25,9 @@ jobs:
       run: |
         JSON_CONTENT=$(echo "${{ steps.read-json.outputs.swagger_json }}")
         JSON_CONTENT=${JSON_CONTENT//\"/\\\"}
-        curl -X PUT "https://api.gitbook.com/v1/spaces/zsMmqzKLpQbo1bWGbk2E/content" \
+
+        # Send the JSON data to GitBook API using POST method
+        curl -X POST "https://api.gitbook.com/v1/spaces/zsMmqzKLpQbo1bWGbk2E/content" \
         -H "Authorization: Bearer $GITBOOK_API_TOKEN" \
         -H "Content-Type: application/json" \
         -d "{\"content\": \"$JSON_CONTENT\"}"
