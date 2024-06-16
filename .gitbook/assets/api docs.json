@@ -28,7 +28,7 @@
                 "tags": [
                     "ActivationCode"
                 ],
-                "summary": "get activationCodes list 99",
+                "summary": "get activationCodes list 11",
                 "description": "Returns list of activationCodes",
                 "operationId": "getActivationCodes",
                 "responses": {
