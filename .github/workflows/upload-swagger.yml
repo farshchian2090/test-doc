@@ -26,7 +26,7 @@ jobs:
           #        JSON_CONTENT=$(echo "${{ steps.read-json.outputs.swagger_json }}")
           #        JSON_CONTENT=${JSON_CONTENT//\"/\\\"}
           
-          curl -X POST "https://api.gitbook.com/v1/spaces/zsMmqzKLpQbo1bWGbk2E/content/import" \
+          curl -X POST "https://api.gitbook.com/v1/spaces/ANQ6J2dd6irB02ci2LY8/content/import" \
           -H "Authorization: Bearer $GITBOOK_API_TOKEN" \
           -H "Content-Type: application/json" \
           -d "{\"url\": \"https://raw.githubusercontent.com/farshchian2090/test-doc/main/.gitbook/assets/api%20docs.json\" , \"source\":\"open-api\"}"
